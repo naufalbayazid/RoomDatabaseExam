@@ -49,7 +49,7 @@ import com.example.roomdatabaseexam.ui.customWidget.TopAppBar
 import kotlinx.coroutines.launch
 
 @Composable
-fun HomeMk(
+fun HomeMatkulView(
     viewModel: HomeMatkulViewModel = viewModel(factory = PenyediaMatkul.Factory),
     onAddMk: () -> Unit = { },
     onDetailClick: (String) -> Unit = { },
@@ -188,7 +188,7 @@ fun CardMk(
             .fillMaxWidth()
             .padding(8.dp),
         colors = CardDefaults.cardColors(
-            containerColor = Color(0xFF001F54) // Warna navy untuk latar belakang kartu
+            containerColor = Color.Black
         )
     ) {
         Column(modifier = Modifier.padding(8.dp)) {

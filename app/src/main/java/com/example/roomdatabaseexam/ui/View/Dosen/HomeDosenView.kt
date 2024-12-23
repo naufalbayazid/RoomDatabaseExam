@@ -12,8 +12,10 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Create
 import androidx.compose.material.icons.filled.Face
+import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
@@ -184,7 +186,7 @@ fun CardDsn(
             .fillMaxWidth()
             .padding(8.dp),
         colors = androidx.compose.material3.CardDefaults.cardColors(
-            containerColor = Color(0xFF001F54) // Warna navy
+            containerColor = Color.Red
         )
     ) {
         Column(
@@ -194,7 +196,7 @@ fun CardDsn(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Icon(imageVector = Icons.Filled.Person, contentDescription = "", tint = Color.White)
+                Icon(imageVector = Icons.Filled.Face, contentDescription = "", tint = Color.White)
                 Spacer(modifier = Modifier.padding(4.dp))
                 Text(
                     text = dosen.nama,
@@ -207,7 +209,7 @@ fun CardDsn(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Icon(imageVector = Icons.Filled.Create, contentDescription = "", tint = Color.White)
+                Icon(imageVector = Icons.Filled.ArrowDropDown, contentDescription = "", tint = Color.White)
                 Spacer(modifier = Modifier.padding(4.dp))
                 Text(
                     text = dosen.nidn,
@@ -220,12 +222,12 @@ fun CardDsn(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Icon(imageVector = Icons.Filled.Face, contentDescription = "", tint = Color.White)
+                Icon(imageVector = Icons.Filled.MoreVert, contentDescription = "", tint = Color.White)
                 Spacer(modifier = Modifier.padding(4.dp))
                 Text(
                     text = dosen.JenisKelamin,
                     fontWeight = FontWeight.Bold,
-                    color = Color.White // Warna teks putih
+                    color = Color.White
                 )
             }
         }

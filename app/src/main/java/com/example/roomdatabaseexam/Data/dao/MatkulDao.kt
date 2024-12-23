@@ -16,13 +16,13 @@ interface MatkulDao {
     @Query("SELECT * FROM Matkul order by namaMk  ASC")
     fun getAllMatkul(): Flow<List<Matkul>>
 
-    @Query("SELECT * FROM Matkul WHERE kdMk =  kdMk")
+    @Query("SELECT * FROM Matkul WHERE kdMk =  :kdMk")
     fun getMatkul(kdMk:String) :Flow<Matkul>
 
     @Delete
-    suspend fun deleteMatkul(Matkul: Matkul)
+    suspend fun deleteMatkul(matkul: Matkul)
 
     @Update
-    fun updateMatkul(Matkul: Matkul)
+    suspend fun updateMatkul(matkul: Matkul)
 
 }
