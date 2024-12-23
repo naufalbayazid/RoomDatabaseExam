@@ -13,16 +13,7 @@ interface DosenDao {
     @Insert
     suspend fun insertDosen(dosen: Dosen)
 
-@Query("SELECT * FROM Dosen order by nama ASC")
-fun getAllDosen(): Flow<Dosen>
-
-@Query("SELECT * FROM  Dosen WHERE nidn = :nidn")
-fun getDosen(nidn:String): Flow<Dosen>
-
-@Delete
-suspend fun deleteDosen(dosen: Dosen)
-
-@Update
-fun updateDosen(dosen: Dosen)
+    @Query("SELECT * FROM Dosen order by nama ASC")
+    fun getAllDosen(): Flow<Dosen>
 
 }
