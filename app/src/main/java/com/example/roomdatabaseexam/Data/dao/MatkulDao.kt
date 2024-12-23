@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface MatkulDao {
     @Insert
-    suspend fun insertMatkul(Matkul : MatkulDao)
+    suspend fun insertMatkul(Matkul : Matkul)
 
     @Query("SELECT * FROM Matkul order by namaMk  ASC")
     fun getAllMatkul(): Flow<List<Matkul>>
@@ -20,9 +20,9 @@ interface MatkulDao {
     fun getMatkul(kdMk:String) :Flow<Matkul>
 
     @Delete
-    suspend fun deleteMatkul(Matkul: MatkulDao)
+    suspend fun deleteMatkul(Matkul: Matkul)
 
     @Update
-    fun updateMatkul(Matkul: MatkulDao)
+    fun updateMatkul(Matkul: Matkul)
 
 }
